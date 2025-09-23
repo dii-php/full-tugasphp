@@ -85,7 +85,7 @@
     </header>
 
     <div class="container">
-        <form action="karcis.php" method="post">
+        <form action="karcisparkir.php" method="post">
             <h2>Input Data Parkir</h2>
             
             <label for="plat">Plat Nomor:</label>
@@ -107,3 +107,4 @@
     </div>
 </body>
 </html>
+
