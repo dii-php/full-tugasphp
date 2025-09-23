@@ -1,8 +1,18 @@
-# UPDATE 23 SEPT 2025
-1. Added "TUGAS PAK RAHMAT"
-2. Added Program Pemesanan Tiket Bioskop
-3. Added Program Pemesanan Makanan di Restoran
-4. Added Program Parkir Kendaraan
-5. Added Program Pemesanan Tiket Transportasi
-6. Updated Index.php
-7. Improve Style
+# 📅 UPDATE 23 SEPT 2025
+1. Added "TUGAS IBU RATNA" section
+2. Added "TUGAS PAK RAHMAT" section
+3. Added Program Pemesanan Tiket Bioskop to "TUGAS PAK RAHMAT" section
+4. Added Program Pemesanan Makanan di Restoran to "TUGAS PAK RAHMAT" section
+5. Added Program Parkir Kendaraan to "TUGAS PAK RAHMAT" section
+6. Added Program Pemesanan Tiket Transportasi to "TUGAS PAK RAHMAT" section
+7. Updated Index.php
+8. Improve Style
+
+# 📅 UPDATE 11 SEPT 2025
+1. Create Index.php
+2. Added Tugas 1 Program web untuk menghitung besar tabungan tiap bulan
+3. Added Tugas 2 Program rental mobil
+4. Added Tugas 3 Program perusahaan
+5. Created Tabungan.php
+6. Created Rental.php
+7. Created Perusahaan.php
