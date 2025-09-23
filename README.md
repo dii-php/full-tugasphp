@@ -17,3 +17,4 @@
 5. Created Tabungan.php
 6. Created Rental.php
 7. Created Perusahaan.php
+8. Improve all Style of Page
