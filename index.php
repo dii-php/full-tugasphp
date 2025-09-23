@@ -25,6 +25,12 @@
             margin: 10px 0 0;
             font-size: 1.2rem;
         }
+        h2.section-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 2rem;
+            color: #ffffffff;
+        }
         .container {
             display: flex;
             flex-direction: row; /* Horizontal */
@@ -77,6 +83,7 @@
         <p>Oleh: Moh. Novrialdi Pratama</p>
     </header>
 
+    <h2 class="section-title">TUGAS IBU RATNA</h2>
     <div class="container">
         <div class="card">
             <h2>Tugas 1</h2>
@@ -94,6 +101,33 @@
             <h2>Tugas 3</h2>
             <p>Program perusahaan</p>
             <a href="perusahaan.php">Lihat Program</a>
+        </div>
+    </div>
+
+    <h2 class="section-title">TUGAS PAK RAHMAT</h2>
+    <div class="container">
+        <div class="card">
+            <h2>Tugas 1</h2>
+            <p>Program Pemesanan Tiket Bioskop</p>
+            <a href="bioskop.php">Lihat Program</a>
+        </div>
+
+        <div class="card">
+            <h2>Tugas 2</h2>
+            <p>Program Pemesanan Makanan di Restoran</p>
+            <a href="makanan.php">Lihat Program</a>
+        </div>
+
+        <div class="card">
+            <h2>Tugas 3</h2>
+            <p>Program Parkir Kendaraan</p>
+            <a href="parkir.php">Lihat Program</a>
+        </div>
+
+        <div class="card">
+            <h2>Tugas 4</h2>
+            <p>Program Pemesanan Tiket Transportasi</p>
+            <a href="transportasi.php">Lihat Program</a>
         </div>
     </div>
 </body>
