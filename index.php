@@ -102,6 +102,12 @@
             <p>Program perusahaan</p>
             <a href="perusahaan.php">Lihat Program</a>
         </div>
+
+        <div class="card">
+            <h2>Tugas 4</h2>
+            <p>Menghitung total gaji</p>
+            <a href="totalgaji.php">Lihat Program</a>
+        </div>
     </div>
 
     <h2 class="section-title">TUGAS PAK RAHMAT</h2>
