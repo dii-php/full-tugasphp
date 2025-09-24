@@ -1,4 +1,4 @@
-# UPDATE 24 SEPT 2025
+# 📅 UPDATE 24 SEPT 2025
 1. Added "TUGAS 4, Menghitung Total Gaji" to "TUGAS IBU RATNA" section
 2. Separate file for tasks from Ibu Ratna and Pak Rahmat to different folder(s). 
 
