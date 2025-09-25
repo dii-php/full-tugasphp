@@ -75,6 +75,55 @@
             background: #2a5298;
             color: #fff;
         }
+
+        /* ✅ Tambahan agar responsif */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            h2.section-title {
+                font-size: 1.5rem;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 25px 10px;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            h2.section-title {
+                font-size: 1.2rem;
+            }
+            .card {
+                padding: 15px;
+                width: 100%;
+                max-width: 300px;
+            }
+            .card h2 {
+                font-size: 1.1rem;
+            }
+            .card p {
+                font-size: 0.85rem;
+            }
+            .card a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
     </style>
 </head>
 <body>
