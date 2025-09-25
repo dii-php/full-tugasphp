@@ -59,4 +59,4 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ## 🚀 How to Run
 1. Clone this repository:
    ```bash
-   git clone https://github.com/username/web-tugas.git
+   git clone https://github.com/dii-php/full-tugasphp
