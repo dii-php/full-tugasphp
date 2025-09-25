@@ -66,4 +66,4 @@ Each assignment is neatly organized into folders based on the teacher in charge.
    https://full-tugasphp.page.gd/
 
 ## 📸 UI Preview
-![UI Preview](as)
+![UI Preview](assets/preview.png)
