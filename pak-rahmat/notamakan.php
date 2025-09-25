@@ -5,61 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota Pembelian Makanan</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            margin: 0;
-            padding: 0;
-            color: #fff;
-        }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    .container {
+        max-width: 500px;
+        margin: 40px auto;
+        background: #fff;
+        color: #333;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    }
+    .kop {
+        text-align: center;
+        border-bottom: 2px dashed #2a5298;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    .kop h2 {
+        margin: 0;
+        color: #2a5298;
+        font-size: 1.6rem;
+    }
+    .kop p {
+        margin: 3px 0;
+        font-size: 0.9rem;
+    }
+    .result {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #2a5298;
+    }
+    .thanks {
+        text-align: center;
+        margin-top: 20px;
+        font-style: italic;
+        color: #555;
+    }
+    .back-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 16px;
+        color: #2a5298;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
         .container {
-            max-width: 500px;
-            margin: 40px auto;
-            background: #fff;
-            color: #333;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-        }
-        .kop {
-            text-align: center;
-            border-bottom: 2px dashed #2a5298;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            margin: 20px;
+            padding: 18px;
+            max-width: 100%;
         }
         .kop h2 {
-            margin: 0;
-            color: #2a5298;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         .kop p {
-            margin: 3px 0;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         .result {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #2a5298;
-        }
-        .thanks {
-            text-align: center;
-            margin-top: 20px;
-            font-style: italic;
-            color: #555;
+            font-size: 0.9rem;
         }
         .back-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 16px;
-            color: #2a5298;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin: 20px auto 0;
         }
-    </style>
+    }
+</style>
+
 </head>
 <body>
     <div class="container">
@@ -97,6 +120,7 @@
 
             $total = $harga * $jumlah;
             $diskon = 0;
+            $persen = 0;
 
             // Diskon berdasarkan jumlah porsi
             if ($jumlah >= 10) {
