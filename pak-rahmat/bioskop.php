@@ -38,6 +38,7 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            box-sizing: border-box;
         }
         .card h2 {
             text-align: center;
@@ -57,6 +58,7 @@
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 1rem;
+            box-sizing: border-box;
         }
         button {
             background: #2a5298;
@@ -77,6 +79,32 @@
             text-decoration: none;
             color: #2a5298;
             font-weight: bold;
+        }
+
+        /* 🔹 Responsive untuk mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .container {
+                align-items: center;
+                padding: 20px 10px;
+            }
+            .card {
+                width: 100%;
+                max-width: 360px;
+                padding: 20px;
+            }
+            input, select, button {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+            .back {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -107,7 +135,7 @@
                     <button type="submit">Pesan Tiket</button>
                 </form>
 
-                <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
             </div>
         </div>
     </div>
