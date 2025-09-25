@@ -8,6 +8,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Biodata Aldi</title>
     <style>
+        /* Responsive layout */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 1.6rem;
+        }
+
+        form, .result, .table-container {
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 0.95rem;
+        }
+
+        label {
+            font-size: 0.9rem;
+        }
+
+        .back {
+            display: block;
+            margin: 8px 0;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            font-size: 14px;
+        }
+
+        header {
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+        }
+
+        form, .result, .table-container {
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        input, button {
+            font-size: 0.9rem;
+        }
+
+        table {
+            font-size: 0.8rem;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+    }
+
+    /* Supaya tabel bisa di-scroll di mobile */
+    .table-container {
+        overflow-x: auto;
+    }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1e3c72, #2a5298);
@@ -112,7 +174,7 @@
     <div class="container">
         <?php
         // Koneksi ke database
-        $koneksi = new mysqli("gabole wlee", "gabole wlee", "gabole wlee", "if0_39908296_bio");
+        $koneksi = new mysqli("sql102.infinityfree.com", "if0_39908296", "pantoloan87", "if0_39908296_bio");
         if ($koneksi->connect_error) {
             die("Koneksi gagal: " . $koneksi->connect_error);
         }
