@@ -66,7 +66,7 @@
     <div class="container">
         <?php
         // Koneksi ke database
-        $koneksi = new mysqli("sql102.infinityfree.com", "if0_39908296", "pantoloan87", "if0_39908296_bio");
+        $koneksi = new mysqli("gabole wlee", "gabole wlee", "gabole wlee", "biodata_db");
         if ($koneksi->connect_error) { die("Koneksi gagal: " . $koneksi->connect_error); }
 
         // Simpan data
