@@ -118,20 +118,51 @@
         // Jika simpan biodata
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['proses'])) {
             $jumlah = $_POST['jumlah'];
+            $error = "";
 
+            // Simpan semua NISN yang dimasukkan user
+            $nisnList = [];
             for ($i = 1; $i <= $jumlah; $i++) {
-                $namaLengkap = $koneksi->real_escape_string($_POST["nama_lengkap_$i"]);
-                $namaPanggilan = $koneksi->real_escape_string($_POST["nama_panggilan_$i"]);
-                $umur = (int) $_POST["umur_$i"];
-
-                $sql = "INSERT INTO biodata (nama_lengkap, nama_panggilan, umur) 
-                        VALUES ('$namaLengkap', '$namaPanggilan', '$umur')";
-                $koneksi->query($sql);
+                $nisn = $koneksi->real_escape_string($_POST["nisn_$i"]);
+                $nisnList[] = $nisn;
             }
 
-            echo '<div class="result"><h2>Data berhasil disimpan!</h2>
-                  <a href="formbio.php" class="back">← Tambah Orang Baru</a><br>
-                  <a href="index.php" class="back">← Kembali ke Daftar Tugas</a></div>';
+            // Cek duplikat di input form
+            if (count($nisnList) !== count(array_unique($nisnList))) {
+                $error = "❌ Terdapat NISN yang sama pada input, data tidak dapat disimpan!";
+            } else {
+                // Cek duplikat dengan database
+                $inClause = "'" . implode("','", $nisnList) . "'";
+                $cek = $koneksi->query("SELECT nisn FROM biodata WHERE nisn IN ($inClause)");
+
+                if ($cek->num_rows > 0) {
+                    $error = "❌ Salah satu NISN sudah terdaftar di database, data tidak dapat disimpan!";
+                }
+            }
+
+            // Jika ada error, tampilkan pesan dalam card
+            if (!empty($error)) {
+                echo '<div class="result" style="background:#ffe5e5; border:1px solid red; color:red;">
+                        <h2>'.$error.'</h2>
+                        <a href="formbio.php" class="back">← Kembali Isi Data</a>
+                      </div>';
+            } else {
+                // Jika tidak ada error, simpan semua data
+                for ($i = 1; $i <= $jumlah; $i++) {
+                    $nisn = $koneksi->real_escape_string($_POST["nisn_$i"]);
+                    $namaLengkap = $koneksi->real_escape_string($_POST["nama_lengkap_$i"]);
+                    $namaPanggilan = $koneksi->real_escape_string($_POST["nama_panggilan_$i"]);
+                    $umur = (int) $_POST["umur_$i"];
+
+                    $sql = "INSERT INTO biodata (nisn, nama_lengkap, nama_panggilan, umur) 
+                            VALUES ('$nisn', '$namaLengkap', '$namaPanggilan', '$umur')";
+                    $koneksi->query($sql);
+                }
+
+                echo '<div class="result"><h2>✅ Data berhasil disimpan!</h2>
+                      <a href="formbio.php" class="back">← Tambah Orang Baru</a><br>
+                      <a href="index.php" class="back">← Kembali ke Daftar Tugas</a></div>';
+            }
         } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['lanjut'])) {
             $jumlah = $_POST['jumlah'];
             ?>
@@ -141,6 +172,10 @@
                 <?php for ($i = 1; $i <= $jumlah; $i++): ?>
                     <fieldset style="margin-bottom:15px; border:1px solid #aaa; border-radius:8px; padding:15px;">
                         <legend><strong>Orang <?= $i ?></strong></legend>
+
+                        <label for="nisn_<?= $i ?>">NISN <?= $i ?>:</label>
+                        <input type="text" name="nisn_<?= $i ?>" id="nisn_<?= $i ?>" required>
+
                         <label for="nama_lengkap_<?= $i ?>">Nama Lengkap <?= $i ?>:</label>
                         <input type="text" name="nama_lengkap_<?= $i ?>" id="nama_lengkap_<?= $i ?>" required>
                         
@@ -171,6 +206,7 @@
             <table>
                 <tr>
                     <th>ID</th>
+                    <th>NISN</th>
                     <th>Nama Lengkap</th>
                     <th>Nama Panggilan</th>
                     <th>Umur</th>
@@ -181,13 +217,14 @@
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>
                                 <td>{$row['id']}</td>
+                                <td>{$row['nisn']}</td>
                                 <td>{$row['nama_lengkap']}</td>
                                 <td>{$row['nama_panggilan']}</td>
                                 <td>{$row['umur']} tahun</td>
                               </tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='4'>Belum ada data biodata</td></tr>";
+                    echo "<tr><td colspan='5'>Belum ada data biodata</td></tr>";
                 }
                 ?>
             </table>
