@@ -59,6 +59,29 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* ✅ Tambahan supaya responsive */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 18px;
+                max-width: 100%;
+            }
+            .kop h2 {
+                font-size: 1.3rem;
+            }
+            .kop p {
+                font-size: 0.8rem;
+            }
+            .result {
+                font-size: 0.9rem;
+            }
+            .back-btn {
+                display: block;
+                text-align: center;
+                margin: 20px auto 0;
+            }
+        }
     </style>
 </head>
 <body>
