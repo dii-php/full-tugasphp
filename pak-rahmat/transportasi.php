@@ -57,6 +57,34 @@
         button:hover {
             background: #1e3c72;
         }
+
+        /* ✅ Tambahan supaya responsif di mobile */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 18px;
+                max-width: 100%;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            label {
+                font-size: 0.9rem;
+            }
+            input, select {
+                font-size: 0.95rem;
+                padding: 8px;
+            }
+            button {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+            .back {
+                display: block;
+                text-align: center;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -78,7 +106,7 @@
             <input type="number" id="jumlah" name="jumlah" min="1" required>
 
             <button type="submit">Pesan Tiket</button>
-            <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+            <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
         </form>
     </div>
 </body>
