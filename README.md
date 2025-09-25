@@ -57,9 +57,12 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ---
 
 ## 🚀 How to Run
-1. Clone this repository:
+1. Clone this repository (Localhost):
    ```bash
    git clone https://github.com/dii-php/full-tugasphp
+2. Or open this site:
+   ```bash
+   https://full-tugasphp.page.gd/
 
 ## 📸 UI Preview
 ![UI Preview](assets/preview.png)
