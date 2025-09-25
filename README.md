@@ -11,7 +11,6 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 - 🖥️ **Responsive design** for both desktop and mobile views.
 - 🎨 Improved UI/UX with a cleaner, modern look.
 - 🔄 Clear update history with proper documentation.
-- 🖥️ Improvement "README.md"
 
 ---
 
@@ -21,7 +20,8 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 - ➕ Added **"TUGAS PAK FAJAR"** to the dashboard.  
 - 📁 Created `pak-fajar` directory.  
 - 📝 Added `formbio.php` inside `pak-fajar`.  
-- 🎨 Improved responsive **UI/UX** on `index.php`.  
+- 🎨 Improved responsive **UI/UX** on `index.php`.
+- - 🖥️ Improvement "README.md"
 
 ---
 
