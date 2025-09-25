@@ -60,7 +60,7 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 1. Clone this repository (Localhost):
    ```bash
    git clone https://github.com/dii-php/full-tugasphp
-2. Or open this site:
+2. Or you can open this site:
    ```bash
    https://full-tugasphp.page.gd/
 
