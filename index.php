@@ -164,6 +164,11 @@
             <p>Diskon toko pakaian</p>
             <a href="ibu-ratna/tokopakaian.php">Lihat Program</a>
         </div>
+        <div class="card">
+            <h2>Tugas 6</h2>
+            <p>Program subsidi pendidikan</p>
+            <a href="ibu-ratna/subsidi.php">Lihat Program</a>
+        </div>
     </div>
 
     <!-- Bagian Tugas Pak Rahmat -->
