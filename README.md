@@ -28,7 +28,7 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ### 🔹 September 24, 2025
 - 📂 Separated assignments for **Ibu Ratna** and **Pak Rahmat** into different folders.  
 - 🆕 Added **"Task 4: Salary Calculation"** under *Ibu Ratna’s section*.  
-- 🆕 Added **"Task 4: Clothing Store Discount"** under *Ibu Ratna’s section*.  
+- 🆕 Added **"Task 5: Clothing Store Discount"** under *Ibu Ratna’s section*.  
 - 📝 Created `totalgaji.php` → 📁 `ibu-ratna`.  
 - 📝 Created `tokopakaian.php` → 📁 `ibu-ratna`.  
 
