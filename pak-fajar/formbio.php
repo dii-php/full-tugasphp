@@ -109,12 +109,12 @@
 <div class="container">
 <?php
 // Koneksi ke database
-$koneksi = new mysqli("gabole wlee", "gabole wlee", "gabole wlee", "biodata");
+$koneksi = new mysqli("sql102.infinityfree.com", "if0_39908296", "pantoloan87", "if0_39908296_bio");
 if ($koneksi->connect_error) {
     die("Koneksi gagal: " . $koneksi->connect_error);
 }
 
-// Daftar kata kasar (supaya tidak bisa diinput kalau ada kata kasar hehe)
+// Daftar kata kasar
 $badwords = [
     "kontol","memek","pepe","peler","jembut","ngentot","perek","bencong","pendo","cukimai","cuki","laso",
     "anjing","bajingan","bangsat","tolol","idiot","goblok","kampret","asu","bodoh",
@@ -131,60 +131,64 @@ function containsBadword($text, $badwords) {
     return false;
 }
 
-// Simpan data
+// Proses simpan data
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['proses'])) {
     $jumlah = $_POST['jumlah'];
-    $error = "";
-    $nisnList = [];
+    $pesanSukses = [];
+    $pesanError = [];
 
     for ($i = 1; $i <= $jumlah; $i++) {
         $nisn = $koneksi->real_escape_string($_POST["nisn_$i"]);
-        $nisnList[] = $nisn;
-    }
+        $namaLengkap = $koneksi->real_escape_string($_POST["nama_lengkap_$i"]);
+        $namaPanggilan = $koneksi->real_escape_string($_POST["nama_panggilan_$i"]);
+        $email = $koneksi->real_escape_string($_POST["email_$i"]);
+        $umur = (int) $_POST["umur_$i"];
 
-    if (count($nisnList) !== count(array_unique($nisnList))) {
-        $error = "❌ Terdapat NISN yang sama pada input!";
-    } else {
-        $inClause = "'" . implode("','", $nisnList) . "'";
-        $cek = $koneksi->query("SELECT nisn FROM biodata WHERE nisn IN ($inClause)");
+        // Cek badword
+        if (containsBadword($namaLengkap, $badwords) || containsBadword($namaPanggilan, $badwords)) {
+            $pesanError[] = "❌ Data dengan NISN <b>$nisn</b> mengandung kata kasar, tidak bisa disimpan!";
+            continue;
+        }
+
+        // Cek duplikat di database
+        $cek = $koneksi->query("SELECT * FROM biodata WHERE nisn='$nisn' OR nama_lengkap='$namaLengkap'");
         if ($cek->num_rows > 0) {
-            $error = "❌ Salah satu NISN sudah terdaftar di database!";
+            $pesanError[] = "❌ Data dengan NISN <b>$nisn</b> atau Nama Lengkap <b>$namaLengkap</b> sudah ada!";
+            continue;
+        }
+
+        // Insert data valid
+        $sql = "INSERT INTO biodata (nisn, nama_lengkap, nama_panggilan, email, umur) 
+                VALUES ('$nisn', '$namaLengkap', '$namaPanggilan', '$email', '$umur')";
+        if ($koneksi->query($sql) === TRUE) {
+            $pesanSukses[] = "✅ Data dengan NISN <b>$nisn</b> berhasil ditambahkan.";
+        } else {
+            $pesanError[] = "❌ Data dengan NISN <b>$nisn</b> gagal disimpan.";
         }
     }
 
-    if (empty($error)) {
-        foreach ($_POST as $key => $value) {
-            if (containsBadword($value, $badwords)) {
-                $error = "❌ JANGAN MENGGUNAKAN KATA KASAR !!!";
-                break;
-            }
+    // Tampilkan pesan hasil
+    echo '<div class="result">';
+    if (!empty($pesanSukses)) {
+        echo '<div style="background:#e6ffed; border:1px solid green; color:green; padding:10px; margin-bottom:10px;">';
+        foreach ($pesanSukses as $msg) {
+            echo "<p>$msg</p>";
         }
+        echo '</div>';
     }
-
-    if (!empty($error)) {
-        echo '<div class="result" style="background:#ffe5e5; border:1px solid red; color:red;">
-            <h2>'.$error.'</h2>
-            <a href="formbio.php" class="back">← Kembali Isi Data</a>
-            </div>';
-    } else {
-        for ($i = 1; $i <= $jumlah; $i++) {
-            $nisn = $koneksi->real_escape_string($_POST["nisn_$i"]);
-            $namaLengkap = $koneksi->real_escape_string($_POST["nama_lengkap_$i"]);
-            $namaPanggilan = $koneksi->real_escape_string($_POST["nama_panggilan_$i"]);
-            $email = $koneksi->real_escape_string($_POST["email_$i"]);
-            $umur = (int) $_POST["umur_$i"];
-
-            $sql = "INSERT INTO biodata (nisn, nama_lengkap, nama_panggilan, email, umur) 
-                    VALUES ('$nisn', '$namaLengkap', '$namaPanggilan', '$email', '$umur')";
-            $koneksi->query($sql);
+    if (!empty($pesanError)) {
+        echo '<div style="background:#ffe5e5; border:1px solid red; color:red; padding:10px;">';
+        foreach ($pesanError as $msg) {
+            echo "<p>$msg</p>";
         }
-        echo '<div class="result">
-            <h2>✅ Data berhasil disimpan!</h2>
-            <a href="formbio.php" class="back">← Tambah Biodata Baru</a><br>
-            <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
-            </div>';
+        echo '</div>';
     }
-} elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['lanjut'])) {
+    echo '<a href="formbio.php" class="back">← Tambah Biodata Baru</a><br>
+          <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+          </div>';
+}
+// Form input data
+elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['lanjut'])) {
     $jumlah = $_POST['jumlah']; ?>
     <form action="formbio.php" method="post">
         <h2>Isi Biodata</h2>
