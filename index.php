@@ -33,9 +33,9 @@
         }
         .container {
             display: flex;
-            flex-direction: row; /* Horizontal */
+            flex-direction: row;
             justify-content: center;
-            flex-wrap: wrap; /* Supaya responsif di layar kecil */
+            flex-wrap: wrap;
             padding: 40px 20px;
             gap: 20px;
         }
@@ -83,57 +83,75 @@
         <p>Oleh: Moh. Novrialdi Pratama</p>
     </header>
 
+    <!-- Bagian Tugas Ibu Ratna -->
     <h2 class="section-title">TUGAS IBU RATNA</h2>
     <div class="container">
         <div class="card">
             <h2>Tugas 1</h2>
             <p>Program web untuk menghitung besar tabungan tiap bulan</p>
-            <a href="tabungan.php">Lihat Program</a>
+            <a href="ibu-ratna/tabungan.php">Lihat Program</a>
         </div>
 
         <div class="card">
             <h2>Tugas 2</h2>
             <p>Program rental mobil</p>
-            <a href="rental.php">Lihat Program</a>
+            <a href="ibu-ratna/rental.php">Lihat Program</a>
         </div>
 
         <div class="card">
             <h2>Tugas 3</h2>
             <p>Program perusahaan</p>
-            <a href="perusahaan.php">Lihat Program</a>
+            <a href="ibu-ratna/perusahaan.php">Lihat Program</a>
         </div>
 
         <div class="card">
             <h2>Tugas 4</h2>
             <p>Menghitung total gaji</p>
-            <a href="totalgaji.php">Lihat Program</a>
+            <a href="ibu-ratna/totalgaji.php">Lihat Program</a>
+        </div>
+
+        <div class="card">
+            <h2>Tugas 5</h2>
+            <p>Diskon toko pakaian</p>
+            <a href="ibu-ratna/tokopakaian.php">Lihat Program</a>
         </div>
     </div>
 
+    <!-- Bagian Tugas Pak Rahmat -->
     <h2 class="section-title">TUGAS PAK RAHMAT</h2>
     <div class="container">
         <div class="card">
             <h2>Tugas 1</h2>
             <p>Program Pemesanan Tiket Bioskop</p>
-            <a href="bioskop.php">Lihat Program</a>
+            <a href="pak-rahmat/bioskop.php">Lihat Program</a>
         </div>
 
         <div class="card">
             <h2>Tugas 2</h2>
             <p>Program Pemesanan Makanan di Restoran</p>
-            <a href="makanan.php">Lihat Program</a>
+            <a href="pak-rahmat/makanan.php">Lihat Program</a>
         </div>
 
         <div class="card">
             <h2>Tugas 3</h2>
             <p>Program Parkir Kendaraan</p>
-            <a href="parkir.php">Lihat Program</a>
+            <a href="pak-rahmat/parkir.php">Lihat Program</a>
         </div>
 
         <div class="card">
             <h2>Tugas 4</h2>
             <p>Program Pemesanan Tiket Transportasi</p>
-            <a href="transportasi.php">Lihat Program</a>
+            <a href="pak-rahmat/transportasi.php">Lihat Program</a>
+        </div>
+    </div>
+
+    <!-- Bagian Tugas Pak Fajar -->
+    <h2 class="section-title">TUGAS PAK FAJAR</h2>
+    <div class="container">
+        <div class="card">
+            <h2>Tugas 1</h2>
+            <p>Form Biodata</p>
+            <a href="pak-fajar/formbio.php">Lihat Program</a>
         </div>
     </div>
 </body>
