@@ -34,7 +34,7 @@
         .card {
             background: #fff;
             color: #333;
-            width: 420px;
+            width: 420px; /* default desktop */
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
@@ -85,6 +85,30 @@
             font-size: 0.85rem;
             margin-top: auto;
         }
+
+        /* ✅ Responsif */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 20px 10px;
+            }
+            .card {
+                width: 90%;       /* lebih besar di mobile */
+                max-width: 500px; /* biar gak terlalu lebar */
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            input, select, button {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+            .back {
+                font-size: 0.9rem;
+                margin-top: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,7 +139,7 @@
                     <button type="submit" href="notamakan.php">Pesan Makanan</button>
                 </form>
 
-                <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
             </div>
         </div>
     </div>
