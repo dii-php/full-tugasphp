@@ -163,7 +163,7 @@
                 <?php endif; ?>
 
                 <a href="tokopakaian.php" class="back">← Beli Lagi</a><br>
-                <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
             </div>
 
         <?php } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['lanjut'])) {
@@ -185,7 +185,7 @@
                 <?php endfor; ?>
                 <button type="submit" name="proses">Hitung Diskon</button>
                 <a href="tokopakaian.php" class="back">← Ubah Jumlah</a><br>
-                <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
             </form>
         <?php } else { ?>
             <form action="tokopakaian.php" method="post">
@@ -193,7 +193,7 @@
                 <label for="jumlah">Ingin beli berapa pakaian?</label>
                 <input type="number" name="jumlah" id="jumlah" min="1" required>
                 <button type="submit" name="lanjut">Lanjut</button>
-                <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
             </form>
         <?php } ?>
     </div>
