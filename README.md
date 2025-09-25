@@ -21,7 +21,7 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 - 📁 Created `pak-fajar` directory.  
 - 📝 Added `formbio.php` inside `pak-fajar`.  
 - 🎨 Improved responsive **UI/UX** on `index.php`.
-- - 🖥️ Improvement "README.md"
+- 🖥️ Improvement "README.md"
 
 ---
 
