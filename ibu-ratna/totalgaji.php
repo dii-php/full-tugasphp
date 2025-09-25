@@ -11,6 +11,9 @@
             margin: 0;
             padding: 0;
             color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         header {
             text-align: center;
@@ -24,8 +27,9 @@
         .container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             padding: 40px 20px;
+            flex: 1;
             flex-direction: column;
         }
         form, .result {
@@ -34,9 +38,9 @@
             padding: 25px;
             border-radius: 12px;
             width: 100%;
-            max-width: 400px; /* biar tidak melebar */
+            max-width: 400px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto; /* supaya tetap di tengah */
             box-sizing: border-box;
         }
         h2 {
@@ -86,13 +90,18 @@
             background: #ddd;
         }
 
-        /* Responsive untuk HP kecil */
+        /* 🔹 Responsive untuk HP kecil */
         @media (max-width: 480px) {
             header h1 {
                 font-size: 1.6rem;
             }
+            .container {
+                padding: 20px 10px;
+                align-items: center; /* card tetap di tengah */
+            }
             form, .result {
                 padding: 15px;
+                max-width: 100%; /* biar full lebar di HP */
             }
             button, .back {
                 font-size: 0.9rem;
@@ -134,7 +143,7 @@
             <hr>
             <p><strong>Total Gaji:</strong> Rp <?= number_format($totalGaji, 0, ',', '.') ?></p>
             <a href="totalgaji.php" class="back">← Hitung Lagi</a>
-            <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+            <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
         </div>
 
 
@@ -152,7 +161,7 @@
             <input type="hidden" name="omset_hidden" id="omset_hidden">
 
             <button type="submit">Hitung Total Gaji</button>
-            <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+            <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
         </form>
 
         <script>
