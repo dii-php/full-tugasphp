@@ -31,9 +31,11 @@
             background: #fff;
             color: #333;
             width: 420px;
+            max-width: 100%;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            box-sizing: border-box;
         }
         .card h2 {
             text-align: center;
@@ -77,12 +79,28 @@
             font-size: 0.9rem;
             line-height: 1.6;
             width: 420px;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         hr {
             border: none;
             border-top: 2px solid rgba(0, 0, 0, 0.2);
             margin: 20px auto;
             width: 100%;
+        }
+
+        /* Tambahan agar responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .card, .support {
+                width: 100%;
+                padding: 20px;
+            }
+            body {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
@@ -122,14 +140,7 @@
                 echo "Total Gaji Bulanan: <b>Rp " . number_format($total_gaji * 4) . "</b>";
                 echo "</div>";
             ?>
-            <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
-            <p class="note">Dibuat dengan beberapa bantuan dari YouTube, Copilot AI</p>
-        </div>
-
-        <div class="support">
-            <p><strong>Fungsi Bantuan:</strong></p>
-            <p><b>YouTube</b> : Memahami algoritma dan struktur PHP</p>
-            <p><b>Copilot AI</b> : Auto Correction apabila terjadi typo, menyesuaikan tema dari tabungan & dashboard.</p>
+            <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
         </div>
     </div>
 </body>
