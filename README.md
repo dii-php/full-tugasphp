@@ -60,3 +60,6 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 1. Clone this repository:
    ```bash
    git clone https://github.com/dii-php/full-tugasphp
+
+## 📸 UI Preview
+![UI Preview](assets/preview.png)
