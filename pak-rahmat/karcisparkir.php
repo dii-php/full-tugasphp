@@ -63,6 +63,34 @@
             font-size: 0.9rem;
             transition: 0.3s;
         }
+
+        /* ✅ Tambahan CSS agar responsif di mobile */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .kop h2 {
+                font-size: 1.2rem;
+            }
+            .kop p {
+                font-size: 0.8rem;
+            }
+            .result {
+                font-size: 0.9rem;
+            }
+            .back {
+                position: static;
+                display: inline-block;
+                margin-top: 15px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
