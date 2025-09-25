@@ -93,7 +93,7 @@
                 echo '<div class="result" style="background:#ffe5e5; border:1px solid red; color:red;">
                         <h2>'.$error.'</h2>
                         <a href="formbio.php" class="back">← Kembali Isi Data</a>
-                      </div>';
+                        </div>';
             } else {
                 for ($i = 1; $i <= $jumlah; $i++) {
                     $nisn = $koneksi->real_escape_string($_POST["nisn_$i"]);
@@ -107,8 +107,8 @@
                     $koneksi->query($sql);
                 }
                 echo '<div class="result"><h2>✅ Data berhasil disimpan!</h2>
-                      <a href="formbio.php" class="back">← Tambah Biodata Baru</a><br>
-                      <a href="index.php" class="back">← Kembali ke Daftar Tugas</a></div>';
+                <a href="formbio.php" class="back">← Tambah Biodata Baru</a><br>
+                <a href="index.php" class="back">← Kembali ke Daftar Tugas</a></div>';       
             }
 
         } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['lanjut'])) {
@@ -123,25 +123,25 @@
 
                         <label for="nisn_<?= $i ?>">NISN:</label>
                         <input type="text" name="nisn_<?= $i ?>" id="nisn_<?= $i ?>" 
-                               required inputmode="numeric" pattern="[0-9]+"
-                               oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                        required inputmode="numeric" pattern="[0-9]+"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'')">
 
                         <label for="nama_lengkap_<?= $i ?>">Nama Lengkap:</label>
                         <input type="text" name="nama_lengkap_<?= $i ?>" id="nama_lengkap_<?= $i ?>" 
-                               required pattern="[A-Za-z\s\.]+"
-                               oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
+                        required pattern="[A-Za-z\s\.]+"
+                        oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
 
                         <label for="nama_panggilan_<?= $i ?>">Nama Panggilan:</label>
                         <input type="text" name="nama_panggilan_<?= $i ?>" id="nama_panggilan_<?= $i ?>" 
-                               required pattern="[A-Za-z\s\.]+"
-                               oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
+                        required pattern="[A-Za-z\s\.]+"
+                        oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
 
                         <label for="email_<?= $i ?>">Email:</label>
                         <input type="email" name="email_<?= $i ?>" id="email_<?= $i ?>" required>
 
                         <label for="umur_<?= $i ?>">Umur:</label>
                         <input type="number" name="umur_<?= $i ?>" id="umur_<?= $i ?>" min="1" required
-                               oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                     </fieldset>
                 <?php endfor; ?>
                 <button type="submit" name="proses">Simpan Biodata</button>
@@ -181,7 +181,7 @@
                                 <td>{$row['nama_panggilan']}</td>
                                 <td>{$row['email']}</td>
                                 <td>{$row['umur']} tahun</td>
-                              </tr>";
+                                </tr>";
                     }
                 } else {
                     echo "<tr><td colspan='6'>Belum ada data biodata</td></tr>";
