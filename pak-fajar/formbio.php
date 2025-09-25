@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Biodata Aldi</title>
     <style>
-        /* Responsive layout */
+    /* Responsive layout */
     @media (max-width: 768px) {
         header h1 {
             font-size: 1.6rem;
@@ -70,99 +70,100 @@
     .table-container {
         overflow-x: auto;
     }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            margin: 0;
-            padding: 0;
-            color: #fff;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            flex-direction: column;
-        }
-        form, .result, .table-container {
-            background: #fff;
-            color: #333;
-            padding: 25px;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 700px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-        h2 {
-            margin-top: 0;
-            color: #2a5298;
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #aaa;
-            box-sizing: border-box;
-        }
-        button {
-            margin-top: 15px;
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            background: #2a5298;
-            color: #fff;    
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        button:hover {
-            background: #0051e9ff;
-        }
-        .back {
-            margin-top: 10px;
-            display: inline-block;
-            padding: 10px 15px;
-            border-radius: 6px;
-            color: #2a5298;
-            font-weight: bold;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            border: 1px solid #aaa;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background: #2a5298;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+    form, .result, .table-container {
+        background: #fff;
+        color: #333;
+        padding: 25px;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 700px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    h2 {
+        margin-top: 0;
+        color: #2a5298;
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #aaa;
+        box-sizing: border-box;
+    }
+    button {
+        margin-top: 15px;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        background: #2a5298;
+        color: #fff;    
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #0051e9ff;
+    }
+    .back {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: #2a5298;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+    th, td {
+        border: 1px solid #aaa;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background: #2a5298;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background: #f9f9f9;
+    }
     </style>
 </head>
 <body>
@@ -237,30 +238,46 @@
                             <legend><strong>Biodata</strong></legend>
 
                             <label for="nisn_<?= $i ?>">NISN:</label>
-                            <input type="text" name="nisn_<?= $i ?>" id="nisn_<?= $i ?>" required>
+                            <input type="text" name="nisn_<?= $i ?>" id="nisn_<?= $i ?>" 
+                                   required inputmode="numeric" pattern="[0-9]+" 
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'')">
 
                             <label for="nama_lengkap_<?= $i ?>">Nama Lengkap:</label>
-                            <input type="text" name="nama_lengkap_<?= $i ?>" id="nama_lengkap_<?= $i ?>" required>
+                            <input type="text" name="nama_lengkap_<?= $i ?>" id="nama_lengkap_<?= $i ?>" 
+                                   required pattern="[A-Za-z\s\.]+" 
+                                   oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
                             
                             <label for="nama_panggilan_<?= $i ?>">Nama Panggilan:</label>
-                            <input type="text" name="nama_panggilan_<?= $i ?>" id="nama_panggilan_<?= $i ?>" required>
+                            <input type="text" name="nama_panggilan_<?= $i ?>" id="nama_panggilan_<?= $i ?>" 
+                                   required pattern="[A-Za-z\s\.]+" 
+                                   oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
                             
                             <label for="umur_<?= $i ?>">Umur:</label>
-                            <input type="number" name="umur_<?= $i ?>" id="umur_<?= $i ?>" min="1" required>
+                            <input type="number" name="umur_<?= $i ?>" id="umur_<?= $i ?>" 
+                                   min="1" required 
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                         <?php else: ?>
                             <legend><strong>Orang <?= $i ?></strong></legend>
 
                             <label for="nisn_<?= $i ?>">NISN <?= $i ?>:</label>
-                            <input type="text" name="nisn_<?= $i ?>" id="nisn_<?= $i ?>" required>
+                            <input type="text" name="nisn_<?= $i ?>" id="nisn_<?= $i ?>" 
+                                   required inputmode="numeric" pattern="[0-9]+" 
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'')">
 
                             <label for="nama_lengkap_<?= $i ?>">Nama Lengkap <?= $i ?>:</label>
-                            <input type="text" name="nama_lengkap_<?= $i ?>" id="nama_lengkap_<?= $i ?>" required>
+                            <input type="text" name="nama_lengkap_<?= $i ?>" id="nama_lengkap_<?= $i ?>" 
+                                   required pattern="[A-Za-z\s\.]+" 
+                                   oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
                             
                             <label for="nama_panggilan_<?= $i ?>">Nama Panggilan <?= $i ?>:</label>
-                            <input type="text" name="nama_panggilan_<?= $i ?>" id="nama_panggilan_<?= $i ?>" required>
+                            <input type="text" name="nama_panggilan_<?= $i ?>" id="nama_panggilan_<?= $i ?>" 
+                                   required pattern="[A-Za-z\s\.]+" 
+                                   oninput="this.value=this.value.replace(/[^A-Za-z\s\.]/g,'')">
                             
                             <label for="umur_<?= $i ?>">Umur <?= $i ?>:</label>
-                            <input type="number" name="umur_<?= $i ?>" id="umur_<?= $i ?>" min="1" required>
+                            <input type="number" name="umur_<?= $i ?>" id="umur_<?= $i ?>" 
+                                   min="1" required 
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                         <?php endif; ?>
                     </fieldset>
                 <?php endfor; ?>
