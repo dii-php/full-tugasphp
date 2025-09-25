@@ -1,27 +1,62 @@
-# 📅 UPDATE 24 SEPT 2025
-1. Separate file for tasks from Ibu Ratna and Pak Rahmat to different folder(s).
-2. Create "TUGAS 4, Menghitung Total Gaji" to "TUGAS IBU RATNA" section (Updated Index.php)
-3. Create "TUGAS 4, Diskon toko pakaian" to "TUGAS IBU RATNA" section (Updated Index.php)
-4. Create totalgaji.php → 📁 ibu-ratna
-5. Create tokopakaian.php → 📁 ibu-ratna
+# 📘 Web Assignment Project - XI RPL B
 
-# 📅 UPDATE 23 SEPT 2025
-1. Added "TUGAS IBU RATNA" section
-2. Added "TUGAS PAK RAHMAT" section
-3. Added Program Pemesanan Tiket Bioskop to "TUGAS PAK RAHMAT" section
-4. Added Program Pemesanan Makanan di Restoran to "TUGAS PAK RAHMAT" section
-5. Added Program Parkir Kendaraan to "TUGAS PAK RAHMAT" section
-6. Added Program Pemesanan Tiket Transportasi to "TUGAS PAK RAHMAT" section
-7. Updated Index.php
-8. Improve Style
-9. Added php.yml to 📁 .github/workflows
+Welcome to the **XI RPL B Web Assignment Repository**!  
+This project contains a collection of simple PHP programs for learning and practicing web application development.  
+Each assignment is neatly organized into folders based on the teacher in charge.
 
-# 📅 UPDATE 11 SEPT 2025
-1. Create Index.php
-2. Added Tugas 1 Program web untuk menghitung besar tabungan tiap bulan
-3. Added Tugas 2 Program rental mobil
-4. Added Tugas 3 Program perusahaan
-5. Created Tabungan.php
-6. Created Rental.php
-7. Created Perusahaan.php
-8. Improve all Style of Page
+---
+
+## ✨ Key Features
+- 📂 Well-structured folders grouped by teacher (*Ibu Ratna, Pak Rahmat, and Pak Fajar*).
+- 🖥️ **Responsive design** for both desktop and mobile views.
+- 🎨 Improved UI/UX with a cleaner, modern look.
+- 🔄 Clear update history with proper documentation.
+- 🖥️ Improvement "README.md"
+
+---
+
+## 📅 Update History
+
+### 🔹 September 25, 2025
+- ➕ Added **"TUGAS PAK FAJAR"** to the dashboard.  
+- 📁 Created `pak-fajar` directory.  
+- 📝 Added `formbio.php` inside `pak-fajar`.  
+- 🎨 Improved responsive **UI/UX** on `index.php`.  
+
+---
+
+### 🔹 September 24, 2025
+- 📂 Separated assignments for **Ibu Ratna** and **Pak Rahmat** into different folders.  
+- 🆕 Added **"Task 4: Salary Calculation"** under *Ibu Ratna’s section*.  
+- 🆕 Added **"Task 4: Clothing Store Discount"** under *Ibu Ratna’s section*.  
+- 📝 Created `totalgaji.php` → 📁 `ibu-ratna`.  
+- 📝 Created `tokopakaian.php` → 📁 `ibu-ratna`.  
+
+---
+
+### 🔹 September 23, 2025
+- ➕ Added **"TUGAS IBU RATNA"** section.  
+- ➕ Added **"TUGAS PAK RAHMAT"** section.  
+- 🎟️ Added **Movie Ticket Booking Program** (Pak Rahmat).  
+- 🍽️ Added **Restaurant Ordering Program** (Pak Rahmat).  
+- 🚗 Added **Vehicle Parking Program** (Pak Rahmat).  
+- 🚌 Added **Transportation Ticket Booking Program** (Pak Rahmat).  
+- 🖼️ Improved main page styling.  
+- ⚙️ Added `php.yml` to 📁 `.github/workflows` for CI/CD.  
+
+---
+
+### 🔹 September 11, 2025
+- 🏠 Created `index.php` as the main page.  
+- 💰 Added **Task 1: Monthly Savings Calculator**.  
+- 🚙 Added **Task 2: Car Rental Program**.  
+- 🏭 Added **Task 3: Company Program**.  
+- 📝 Created `tabungan.php`, `rental.php`, and `perusahaan.php`.  
+- 🎨 Enhanced overall page styles.  
+
+---
+
+## 🚀 How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/username/web-tugas.git
