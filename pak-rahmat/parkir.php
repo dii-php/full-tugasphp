@@ -77,6 +77,37 @@
             text-decoration: none;
             transition: 0.3s;
         }
+
+        /* ✅ Tambahan supaya responsif di mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            form {
+                width: 100%;
+                max-width: 90%;
+                padding: 20px;
+            }
+            form h2 {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+            label {
+                font-size: 0.9rem;
+            }
+            input, select {
+                font-size: 0.95rem;
+                padding: 8px;
+            }
+            button, .back {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+            .back {
+                display: block;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -85,7 +116,7 @@
     </header>
 
     <div class="container">
-        <form action="karcis.php" method="post">
+        <form action="karcisparkir.php" method="post">
             <h2>Input Data Parkir</h2>
             
             <label for="plat">Plat Nomor:</label>
@@ -102,7 +133,7 @@
             <input type="number" name="jam" id="jam" min="1" required>
 
             <button type="submit">Cetak Karcis</button>
-            <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
+            <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
         </form>
     </div>
 </body>
