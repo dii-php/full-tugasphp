@@ -18,7 +18,8 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 
 ### 🔹 September 25, 2025
 - ➕ Added **"TUGAS PAK FAJAR"** to the dashboard inside `index.php`.  
-- 📁 Created `pak-fajar` directory.  
+- 📁 Created `pak-fajar` directory.
+- 📝 Created `subidi.php` inside `ibu-ratna`
 - 📝 Created `formbio.php` inside `pak-fajar`.  
 - 🎨 Improved responsive **UI/UX** on `index.php`.
 - 🖥️ Improvement `README.md`.
