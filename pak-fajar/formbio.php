@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Biodata Dinamis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            flex-direction: column;
+        }
+        form, .result, .table-container {
+            background: #fff;
+            color: #333;
+            padding: 25px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        h2 {
+            margin-top: 0;
+            color: #2a5298;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #2a5298;
+            color: #fff;    
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0051e9ff;
+        }
+        .back {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 6px;
+            color: #2a5298;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #2a5298;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form Biodata</h1>
+        <p>Oleh: Moh.Novrialdi Pratama</p>
+    </header>
+
+    <div class="container">
+        <?php
+        // Koneksi ke database
+        $koneksi = new mysqli("localhost", "root", "", "biodata_db");
+
+        if ($koneksi->connect_error) {
+            die("Koneksi gagal: " . $koneksi->connect_error);
+        }
+
+        // Jika simpan biodata
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['proses'])) {
+            $jumlah = $_POST['jumlah'];
+
+            for ($i = 1; $i <= $jumlah; $i++) {
+                $namaLengkap = $koneksi->real_escape_string($_POST["nama_lengkap_$i"]);
+                $namaPanggilan = $koneksi->real_escape_string($_POST["nama_panggilan_$i"]);
+                $umur = (int) $_POST["umur_$i"];
+
+                $sql = "INSERT INTO biodata (nama_lengkap, nama_panggilan, umur) 
+                        VALUES ('$namaLengkap', '$namaPanggilan', '$umur')";
+                $koneksi->query($sql);
+            }
+
+            echo '<div class="result"><h2>Data berhasil disimpan!</h2>
+                  <a href="formbio.php" class="back">← Tambah Orang Baru</a><br>
+                  <a href="index.php" class="back">← Kembali ke Daftar Tugas</a></div>';
+        } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['lanjut'])) {
+            $jumlah = $_POST['jumlah'];
+            ?>
+            <form action="formbio.php" method="post">
+                <h2>Isi Biodata Setiap Orang</h2>
+                <input type="hidden" name="jumlah" value="<?= $jumlah ?>">
+                <?php for ($i = 1; $i <= $jumlah; $i++): ?>
+                    <fieldset style="margin-bottom:15px; border:1px solid #aaa; border-radius:8px; padding:15px;">
+                        <legend><strong>Orang <?= $i ?></strong></legend>
+                        <label for="nama_lengkap_<?= $i ?>">Nama Lengkap <?= $i ?>:</label>
+                        <input type="text" name="nama_lengkap_<?= $i ?>" id="nama_lengkap_<?= $i ?>" required>
+                        
+                        <label for="nama_panggilan_<?= $i ?>">Nama Panggilan <?= $i ?>:</label>
+                        <input type="text" name="nama_panggilan_<?= $i ?>" id="nama_panggilan_<?= $i ?>" required>
+                        
+                        <label for="umur_<?= $i ?>">Umur <?= $i ?>:</label>
+                        <input type="number" name="umur_<?= $i ?>" id="umur_<?= $i ?>" min="1" required>
+                    </fieldset>
+                <?php endfor; ?>
+                <button type="submit" name="proses">Simpan Biodata</button>
+                <a href="formbio.php" class="back">← Ubah Jumlah</a><br>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
+            </form>
+        <?php } else { ?>
+            <form action="formbio.php" method="post">
+                <h2>Jumlah Orang</h2>
+                <label for="jumlah">Masukkan jumlah orang yang ingin ditambahkan:</label>
+                <input type="number" name="jumlah" id="jumlah" min="1" required>
+                <button type="submit" name="lanjut">Lanjut</button>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
+            </form>
+        <?php } ?>
+
+        <!-- Tabel Data Biodata -->
+        <div class="table-container">
+            <h2>Daftar Biodata</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Lengkap</th>
+                    <th>Nama Panggilan</th>
+                    <th>Umur</th>
+                </tr>
+                <?php
+                $result = $koneksi->query("SELECT * FROM biodata ORDER BY id ASC");
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                                <td>{$row['id']}</td>
+                                <td>{$row['nama_lengkap']}</td>
+                                <td>{$row['nama_panggilan']}</td>
+                                <td>{$row['umur']} tahun</td>
+                              </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>Belum ada data biodata</td></tr>";
+                }
+                ?>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
