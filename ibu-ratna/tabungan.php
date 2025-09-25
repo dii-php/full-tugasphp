@@ -38,6 +38,7 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            box-sizing: border-box;
         }
         .card h2 {
             text-align: center;
@@ -57,6 +58,7 @@
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 1rem;
+            box-sizing: border-box;
         }
         .info {
             font-size: 0.9rem;
@@ -113,6 +115,35 @@
             font-size: 0.85rem;
             margin-top: auto;
         }
+
+        /* 🔹 Responsive untuk mobile */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .container {
+                align-items: center;
+                padding: 20px 10px;
+            }
+            .card {
+                width: 100%;
+                max-width: 360px;
+                padding: 20px;
+            }
+            input, button {
+                font-size: 0.95rem;
+                padding: 10px;
+            }
+            .result {
+                font-size: 0.95rem;
+            }
+            .back {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -155,16 +186,7 @@
                 }  
                 ?>
 
-                <a href="index.php" class="back">← Kembali ke Daftar Tugas</a>
-
-                <p class="note">Dibuat dengan beberapa bantuan dari Chat GPT, YouTube, Copilot AI, Windsurf</p>
-            </div><hr>
-            <div class="support">
-                <p><strong>Fungsi Bantuan:</strong></p>
-                <p><b>YouTube</b> : Memahami algoritma dan struktur PHP</p>
-                <p><b>ChatGPT</b> : Membuat JavaScript untuk update Real Time nominal Bunga</p>
-                <p><b>Copilot AI</b> : Auto Correction apabila terjadi typo</p>
-                <p><b>Windsurf</b> : Referensi tema, dan UI (Style.css)</p>
+                <a href="../index.php" class="back">← Kembali ke Daftar Tugas</a>
             </div>
         </div>
     </div>
