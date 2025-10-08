@@ -169,6 +169,16 @@
             <p>Program subsidi pendidikan</p>
             <a href="ibu-ratna/subsidi.php">Lihat Program</a>
         </div>
+        <div class="card">
+            <h2>Tugas 7</h2>
+            <p>Program Pendaftaran Ulang SMK</p>
+            <a href="ibu-ratna/smk.php">Lihat Program</a>
+        </div>
+        <div class="card">
+            <h2>Tugas 8</h2>
+            <p>Program Rental Mobil (Switchcase Version)</p>
+            <a href="ibu-ratna/rental2.php">Lihat Program</a>
+        </div>
     </div>
 
     <!-- Bagian Tugas Pak Rahmat -->
