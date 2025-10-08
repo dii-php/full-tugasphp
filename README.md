@@ -13,6 +13,13 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 - 🔄 Clear update history with proper documentation.
 
 ---
+## 📅 Update History
+
+### 🔹 October 10, 2025
+- ➕ Added `smk.php` and `rental2.php` as **"TUGAS 7"** and **"TUGAS 8"** to `📁 TUGAS IBU RATNA` 
+- 📝 Created `smk.php` inside `ibu-ratna`.
+- 📝 Created `rental2.php` inside `ibu-ratna`.  
+---
 
 ## 📅 Update History
 
