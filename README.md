@@ -24,7 +24,7 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 
 ### 🔹 October 08, 2025
 
-- ➕ Added `smk.php` and `rental2.php` as **"TUGAS 7"** and **"TUGAS 8"** to 📁 `ibu-ratna` 
+- ➕ Added `Program Pendaftaran Ulang SMK` and `Program Rental Mobil (Switchcase)` as **"TUGAS 7"** and **"TUGAS 8"** to `index.php` inside 📁 `ibu-ratna` 
 - 📝 Created `smk.php` inside 📁 `ibu-ratna`.
 - 📝 Created `rental2.php` inside 📁 `ibu-ratna`.
   
