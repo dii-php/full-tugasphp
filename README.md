@@ -15,13 +15,20 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ---
 ## 📅 Update History
 
-### 🔹 October 10, 2025
-- ➕ Added `smk.php` and `rental2.php` as **"TUGAS 7"** and **"TUGAS 8"** to 📁 `TUGAS IBU RATNA` 
-- 📝 Created `smk.php` inside `ibu-ratna`.
-- 📝 Created `rental2.php` inside `ibu-ratna`.  
----
+### 🔹 October 09, 2025
+- ➕ Added `Program Minimarket` as **"TUGAS 2"** to 📁 `pak-fajar` 
+- 📝 Created `minimarket.php` inside 📁 `pak-fajar`.
+- ✏ Edited `index.php` for adding `minimarket.php` inside 📁 `index.php`.
+  
+--- 
 
-## 📅 Update History
+### 🔹 October 08, 2025
+
+- ➕ Added `smk.php` and `rental2.php` as **"TUGAS 7"** and **"TUGAS 8"** to 📁 `ibu-ratna` 
+- 📝 Created `smk.php` inside 📁 `ibu-ratna`.
+- 📝 Created `rental2.php` inside 📁 `ibu-ratna`.
+  
+---
 
 ### 🔹 September 25, 2025
 - ➕ Added **"TUGAS PAK FAJAR"** to the dashboard inside `index.php`.  
