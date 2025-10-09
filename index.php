@@ -76,7 +76,23 @@
             color: #fff;
         }
 
-        /* ✅ Tambahan agar responsif */
+        /* ✅ Gaya khusus agar link di dalam paragraf (Kelompok 5) polos tanpa background */
+        .card p a {
+            all: unset;
+            color: #2a5298;
+            font-weight: bold;
+            cursor: pointer;
+            background: transparent !important;
+        }
+        .card p a:hover,
+        .card p a:focus,
+        .card p a:active {
+            background: transparent !important;
+            text-decoration: underline;
+            color: #1e3c72;
+            outline: none;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
@@ -132,7 +148,6 @@
         <p>Oleh: Moh. Novrialdi Pratama</p>
     </header>
 
-    <!-- Bagian Tugas Ibu Ratna -->
     <h2 class="section-title">TUGAS IBU RATNA</h2>
     <div class="container">
         <div class="card">
@@ -181,7 +196,6 @@
         </div>
     </div>
 
-    <!-- Bagian Tugas Pak Rahmat -->
     <h2 class="section-title">TUGAS PAK RAHMAT</h2>
     <div class="container">
         <div class="card">
@@ -209,13 +223,18 @@
         </div>
     </div>
 
-    <!-- Bagian Tugas Pak Fajar -->
     <h2 class="section-title">TUGAS PAK FAJAR</h2>
     <div class="container">
         <div class="card">
             <h2>Tugas 1</h2>
             <p>Form Biodata</p>
             <a href="pak-fajar/formbio.php">Lihat Program</a>
+        </div>
+
+        <div class="card">
+            <h2>Tugas 2</h2>
+            <p>Minimarket (Tugas <a href="https://classroom.google.com/c/Nzg5NDY1NzYyMjg1/a/ODA0MTQxMjYyNDcz/details" target="_blank">Kelompok 5</a>)</p>
+            <a href="pak-fajar/minimarket.php">Lihat Program</a>
         </div>
     </div>
 </body>
