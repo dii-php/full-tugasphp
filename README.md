@@ -15,11 +15,11 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ---
 ## 📅 Update History
 
-### 🔹 October 08, 2025
+### 🔹 October 20, 2025
 
 - 📝 Created `Tugas Pak Ilman` into `Index.php`.
 - 📝 Created `nilai.php` into 📁 `pak-ilman` folder. 
-- ➕ Added `Input Nilai` as **TUGAS 1**
+- ➕ Added `Input Nilai` as **TUGAS 1** in `Tugas Pak Ilman`
   
 --- 
 
