@@ -15,10 +15,11 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ---
 ## 📅 Update History
 
-### 🔹 October 09, 2025
-- ➕ Added `Program Minimarket` as **"TUGAS 2"** to 📁 `pak-fajar` 
-- 📝 Created `minimarket.php` inside 📁 `pak-fajar`.
-- ✏ Edited `index.php` for adding `minimarket.php` inside 📁 `index.php`.
+### 🔹 October 08, 2025
+
+- 📝 Created `Tugas Pak Ilman` into `Index.php`.
+- 📝 Created `nilai.php` into 📁 `pak-ilman` folder. 
+- ➕ Added `Input Nilai` as **TUGAS 1**
   
 --- 
 
