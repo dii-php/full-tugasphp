@@ -15,6 +15,17 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ---
 ## 📅 Update History
 
+### 🔹 October 21, 2025
+
+- ➕ Added **"TUGAS 5: Program Kelulusan Siswa"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 6: Program Total Harga & Diskon"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 7: Program Kehadiran Karyawan"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 8: Program Penilaian Karyawan"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 9: Program Gaji & Lembur"** to `index.php` inside 📁 `pak-rahmat`.
+- 📝 Created `kelulusan.php`, `totalharga.php`, `daftarhadir.php`, `nilaikaryawan.php`, and `gajilembur.php` inside the `pak-rahmat` folder.
+  
+---
+
 ### 🔹 October 20, 2025
 
 - 📝 Created `Tugas Pak Ilman` into `Index.php`.
