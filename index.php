@@ -230,7 +230,22 @@
             <h2>Tugas 6</h2>
             <p>Program Total Harga dan Diskon</p>
             <a href="pak-rahmat/totalharga.php">Lihat Program</a>
-        </div>
+        </div>                                                                                                                                                                         
+        <div class="card">
+            <h2>Tugas 7</h2>
+            <p>Program Kehadiran</p>
+            <a href="pak-rahmat/daftarhadir.php">Lihat Program</a>
+        </div>                                                                                                                                                                   
+        <div class="card">
+            <h2>Tugas 8</h2>
+            <p>Program Nilai Karyawan</p>
+            <a href="pak-rahmat/nilaikaryawan.php">Lihat Program</a>
+        </div>                                                                                                                                                               
+        <div class="card">
+            <h2>Tugas 9</h2>
+            <p>Program Gaji & Lembur Karyawan</p>
+            <a href="pak-rahmat/gajilembur.php">Lihat Program</a>
+        </div>                                                                                                                                                               
     </div>
 
     <h2 class="section-title">TUGAS PAK FAJAR</h2>
