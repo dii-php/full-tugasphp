@@ -221,6 +221,16 @@
             <p>Program Pemesanan Tiket Transportasi</p>
             <a href="pak-rahmat/transportasi.php">Lihat Program</a>
         </div>
+        <div class="card">
+            <h2>Tugas 5</h2>
+            <p>Program Penentuan Kelulusan Siswa</p>
+            <a href="pak-rahmat/kelulusan.php">Lihat Program</a>
+        </div>
+        <div class="card">
+            <h2>Tugas 6</h2>
+            <p>Program Total Harga dan Diskon</p>
+            <a href="pak-rahmat/totalharga.php">Lihat Program</a>
+        </div>
     </div>
 
     <h2 class="section-title">TUGAS PAK FAJAR</h2>
@@ -237,5 +247,12 @@
             <a href="pak-fajar/minimarket.php">Lihat Program</a>
         </div>
     </div>
+    <h2 class="section-title">TUGAS PAK ILMAN</h2>
+    <div class="container">
+        <div class="card">
+            <h2>Tugas 1</h2>
+            <p>Input Nilai (<a>Tugas Kelompok 3</a>)</p>
+            <a href="nilai.php">Lihat Program</a>
+        </div>
 </body>
 </html>
