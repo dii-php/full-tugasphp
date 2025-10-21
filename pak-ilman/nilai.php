@@ -72,7 +72,7 @@
 
 <?php
 
-$koneksi = new mysqli("sql102.infinityfree.com", "if0_39908296", "pantoloan87", "if0_39908296_nilai");
+$koneksi = new mysqli("tch", "gabole wlee", "apa", "db_nilai");
 if ($koneksi->connect_error) {
     die("Koneksi gagal: " . $koneksi->connect_error);
 }
