@@ -27,7 +27,7 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 
 ### 🔹 December 03, 2025
 - ➕ Added **"TUGAS 9: Program Simple Calculator"** to `index.php` inside 📁 `ibu-ratna`.
-- 📝 Created `kalkulatorsederhana.php` inside 📁 `ibu-ratna`.
+- 📝 Created `simplecalcu.php` inside 📁 `ibu-ratna`.
 
 ---
 
