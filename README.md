@@ -15,6 +15,22 @@ Each assignment is neatly organized into folders based on the teacher in charge.
 ---
 ## 📅 Update History
 
+### 🔹 December 02, 2025
+- ➕ Added **"TUGAS 10: Program Penjualan Bulanan"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 11: Program Pelunasan Hutang"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 12: Program Validasi PIN"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 13: Program Suhu Kota"** to `index.php` inside 📁 `pak-rahmat`.
+- ➕ Added **"TUGAS 14: Program Pola Bintang"** to `index.php` inside 📁 `pak-rahmat`.
+- 📝 Created `penjualanbulanan.php`, `pelunasanhutang.php`, `validasipin.php`, `suhukota.php`, and `polabintang.php` inside the 📁 `pak-rahmat` folder.
+
+---
+
+### 🔹 December 03, 2025
+- ➕ Added **"TUGAS 9: Program Simple Calculator"** to `index.php` inside 📁 `ibu-ratna`.
+- 📝 Created `kalkulatorsederhana.php` inside 📁 `ibu-ratna`.
+
+---
+
 ### 🔹 October 21, 2025
 
 - ➕ Added **"TUGAS 5: Program Kelulusan Siswa"** to `index.php` inside 📁 `pak-rahmat`.
