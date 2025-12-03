@@ -194,6 +194,11 @@
             <p>Program Rental Mobil (Switchcase Version)</p>
             <a href="ibu-ratna/rental2.php">Lihat Program</a>
         </div>
+        <div class="card">
+            <h2>Tugas 9</h2>
+            <p>Program Simple Calculator</p>
+            <a href="ibu-ratna/simplecalcu.php">Lihat Program</a>
+        </div>
     </div>
 
     <h2 class="section-title">TUGAS PAK RAHMAT</h2>
@@ -245,7 +250,32 @@
             <h2>Tugas 9</h2>
             <p>Program Gaji & Lembur Karyawan</p>
             <a href="pak-rahmat/gajilembur.php">Lihat Program</a>
+        </div>            
+            <div class="card">
+            <h2>Tugas 10</h2>
+            <p>Program Penjualan Bulanan</p>
+            <a href="pak-rahmat/penjualanbulanan.php">Lihat Program</a>
         </div>                                                                                                                                                               
+            <div class="card">
+            <h2>Tugas 11</h2>
+            <p>Program Pelunasan Hutang</p>
+            <a href="pak-rahmat/pelunasanhutang.php">Lihat Program</a>
+        </div>                                                                                                                                                     
+            <div class="card">
+            <h2>Tugas 12</h2>
+            <p>Program Validasi PIN</p>
+            <a href="pak-rahmat/validasipin.php">Lihat Program</a>
+        </div>                                                                                                                                                      
+            <div class="card">
+            <h2>Tugas 13</h2>
+            <p>Program Suhu Kota</p>
+            <a href="pak-rahmat/suhukota.php">Lihat Program</a>
+        </div>                                                                                                                                                      
+            <div class="card">
+            <h2>Tugas 14</h2>
+            <p>Program Pola Bintang</p>
+            <a href="pak-rahmat/polabintang.php">Lihat Program</a>
+        </div>                                                                                                                                                      
     </div>
 
     <h2 class="section-title">TUGAS PAK FAJAR</h2>
@@ -267,7 +297,7 @@
         <div class="card">
             <h2>Tugas 1</h2>
             <p>Input Nilai (<a>Tugas Kelompok 3</a>)</p>
-            <a href="nilai.php">Lihat Program</a>
+            <a href="pak-ilman/nilai.php">Lihat Program</a>
         </div>
 </body>
 </html>
